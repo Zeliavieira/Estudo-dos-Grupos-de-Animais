@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estudo dos Grupos de Animais</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .container {
+      text-align: center;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      max-width: 800px;
+      margin: 20px;
+    }
+    h1 {
+      margin-bottom: 20px;
+      color: #008080;
+    }
+    .buttons-container {
+      margin-bottom: 20px;
+    }
+    button {
+      background-color: #008080;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      margin: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #004d4d;
+    }
+    .info-container {
+      background-color: #e0f7fa;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1);
+      font-size: 18px;
+      line-height: 1.6;
+      text-align: left;
+    }
+    h2 {
+      color: #00796b;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Estudo dos Grupos de Animais</h1>
+    <div class="buttons-container">
+      <button onclick="showInfo('poriferos')">Poríferos</button>
+      <button onclick="showInfo('cnidarios')">Cnidários</button>
+      <button onclick="showInfo('planarias')">Planárias</button>
+      <button onclick="showInfo('tenias')">Tênias</button>
+      <button onclick="showInfo('esquistossomos')">Esquistossomos</button>
+      <button onclick="showInfo('nematodeos')">Nematódeos</button>
+      <button onclick="showInfo('anelideos')">Anelídeos</button>
+      <button onclick="showInfo('moluscos')">Moluscos</button>
+      <button onclick="showInfo('gastrapodes')">Gastrópodes</button>
+      <button onclick="showInfo('cefalopodes')">Cefalópodes</button>
+      <button onclick="showInfo('bivalves')">Bivalves</button>
+      <button onclick="showInfo('crustaceos')">Crustáceos</button>
+      <button onclick="showInfo('aracnideos')">Aracnídeos</button>
+      <button onclick="showInfo('insetos')">Insetos</button>
+      <button onclick="showInfo('artropodes')">Artrópodes</button>
+    </div>
+    <div class="info-container" id="info-container">
+      <p>Clique em um grupo de animais para aprender mais sobre a reprodução e características deles!</p>
+    </div>
+  </div>
+
+  <script>
+    function showInfo(animalGroup) {
+      const infoContainer = document.getElementById('info-container');
+      const info = {
+        poriferos: `
+          <h2>Poríferos</h2>
+          <p><strong>Reprodução:</strong> Os poríferos (esponjas) podem se reproduzir assexuadamente por gemulação ou sexuadamente, liberando óvulos e espermatozoides na água. A fertilização ocorre fora do corpo e as larvas nadam até encontrar um substrato adequado.</p>
+          <p><strong>Informações Gerais:</strong> São animais aquáticos que filtram água para capturar alimento e têm um corpo poroso. São importantes para a filtragem dos ambientes aquáticos.</p>
+        `,
+        cnidarios: `
+          <h2>Cnidários</h2>
+          <p><strong>Reprodução:</strong> Os cnidários (como águas-vivas e corais) podem se reproduzir assexuadamente por brotamento ou sexuadamente, liberando óvulos e espermatozoides na água. A fertilização ocorre externamente e as larvas desenvolvem-se em novos indivíduos.</p>
+          <p><strong>Informações Gerais:</strong> Têm células especializadas chamadas cnidócitos para capturar presas e são encontrados em ambientes marinhos.</p>
+        `,
+        planarias: `
+          <h2>Planárias</h2>
+          <p><strong>Reprodução:</strong> Planárias podem se reproduzir assexuadamente por bipartição, onde um indivíduo se divide e cada parte se regenera em um novo animal. Também têm reprodução sexual, trocando espermatozoides e liberando ovos.</p>
+          <p><strong>Informações Gerais:</strong> São vermes achatados encontrados em ambientes aquáticos e terrestres, conhecidos por sua capacidade de regeneração.</p>
+        `,
+        tenias: `
+          <h2>Tênias</h2>
+          <p><strong>Reprodução:</strong> Tênias são parasitas que se reproduzem no intestino de seus hospedeiros, liberando ovos que são excretados e contaminam o ambiente, onde são ingeridos por novos hospedeiros.</p>
+          <p><strong>Informações Gerais:</strong> São vermes planos que vivem como parasitas e podem causar doenças como a teníase em humanos.</p>
+        `,
+        esquistossomos: `
+          <h2>Esquistossomos</h2>
+          <p><strong>Reprodução:</strong> Esquistossomos são vermes parasitas que se reproduzem dentro dos vasos sanguíneos dos hospedeiros, liberando ovos que são excretados na água e podem causar infecções.</p>
+          <p><strong>Informações Gerais:</strong> Causam esquistossomose e são transmitidos através da água contaminada.</p>
+        `,
+        nematodeos: `
+          <h2>Nematódeos</h2>
+          <p><strong>Reprodução:</strong> Nematódeos (vermes cilíndricos) se reproduzem sexualmente, com ovos que são depositados no ambiente e desenvolvem-se fora do corpo do adulto.</p>
+          <p><strong>Informações Gerais:</strong> São encontrados em diversos habitats e podem ser parasitas de plantas e animais.</p>
+        `,
+        anelideos: `
+          <h2>Anelídeos</h2>
+          <p><strong>Reprodução:</strong> Anelídeos, como minhocas, podem se reproduzir sexualmente, trocando espermatozoides entre dois indivíduos e liberando ovos. Alguns podem se reproduzir assexuadamente por fragmentação.</p>
+          <p><strong>Informações Gerais:</strong> São vermes segmentados encontrados em ambientes aquáticos e terrestres, desempenhando papel importante na decomposição.</p>
+        `,
+        moluscos: `
+          <h2>Moluscos</h2>
+          <p><strong>Reprodução:</strong> Moluscos se reproduzem sexualmente, colocando ovos que se desenvolvem em larvas antes de se tornarem adultos. Alguns têm reprodução assexuada por fragmentação.</p>
+          <p><strong>Informações Gerais:</strong> Incluem caracóis, polvos e mexilhões. Têm corpos macios, e muitos possuem conchas externas.</p>
+        `,
+        gastrapodes: `
+          <h2>Gastrópodes</h2>
+          <p><strong>Reprodução:</strong> Gastrópodes como caracóis se reproduzem sexualmente, colocando ovos que se desenvolvem em larvas. Alguns também podem se reproduzir assexuadamente.</p>
+          <p><strong>Informações Gerais:</strong> São conhecidos por suas conchas espirais ou a falta delas em algumas espécies, e podem viver em ambientes terrestres ou aquáticos.</p>
+        `,
+        cefalopodes: `
+          <h2>Cefalópodes</h2>
+          <p><strong>Reprodução:</strong> Cefalópodes, como polvos e lulas, se reproduzem sexualmente. As fêmeas depositam ovos que são incubados até eclodirem, e os filhotes são independentes logo após o nascimento.</p>
+          <p><strong>Informações Gerais:</strong> São moluscos com corpos adaptados para a vida ativa, geralmente possuindo tentáculos e uma concha interna ou ausente.</p>
+        `,
+        bivalves: `
+          <h2>Bivalves</h2>
+          <p><strong>Reprodução:</strong> Bivalves, como mexilhões e ostras, se reproduzem sexualmente, liberando ovos e espermatozoides na água. A fertilização ocorre externamente e as larvas se desenvolvem em água antes de se fixarem ao substrato.</p>
+          <p><strong>Informações Gerais:</strong> Têm um corpo comprimido lateralmente e uma concha dividida em duas partes conectadas por uma dobradiça.</p>
+        `,
+        crustaceos: `
+          <h2>Crustáceos</h2>
+          <p><strong>Reprodução:</strong> Crustáceos, como camarões e caranguejos, se reproduzem sexualmente. As fêmeas produzem ovos que são fertilizados e desenvolvem-se em larvas antes de se tornarem adultos.</p>
+          <p><strong>Informações Gerais:</strong> São artrópodes aquáticos com exoesqueleto rígido e geralmente possuem apêndices articulados.</p>
+        `,
+        aracnideos: `
+          <h2>Aracnídeos</h2>
+          <p><strong>Reprodução:</strong> Aracnídeos, como aranhas e escorpiões, se reproduzem sexualmente, com os machos transferindo esperma para as fêmeas. As fêmeas depositam ovos em sacos ou diretamente no ambiente.</p>
+          <p><strong>Informações Gerais:</strong> São artrópodes terrestres com quatro pares de pernas e corpo dividido em cefalotórax e abdômen.</p>
+        `,
+        insetos: `
+          <h2>Insetos</h2>
+          <p><strong>Reprodução:</strong> Insetos se reproduzem sexualmente, com os ovos sendo depositados em diversos ambientes. A maioria passa por metamorfose completa ou incompleta durante seu desenvolvimento.</p>
+          <p><strong>Informações Gerais:</strong> São o maior grupo de artrópodes, com três pares de pernas e corpo dividido em cabeça, tórax e abdômen.</p>
+        `,
+        artropodes: `
+          <h2>Artrópodes</h2>
+          <p><strong>Reprodução:</strong> Artrópodes, que incluem insetos, aracnídeos e crustáceos, se reproduzem sexualmente, com fertilização interna ou externa. Os ovos eclodem em larvas ou ninfas que se desenvolvem em adultos.</p>
+          <p><strong>Informações Gerais:</strong> Possuem exoesqueleto rígido, corpo segmentado e apêndices articulados. São encontrados em diversos habitats e desempenham papéis ecológicos importantes.</p>
+        `,
+      };
+      infoContainer.innerHTML = info[animalGroup] || `<p>Informações não disponíveis.</p>`;
+    }
+  </script>
+</body>
+</html>
